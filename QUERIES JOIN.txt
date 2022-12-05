@@ -36,3 +36,16 @@ INNER JOIN course_teacher
 ON course_teacher.course_id = courses.id
 INNER JOIN teachers
 ON course_teacher.teacher_id = teachers.id
+
+6)
+SELECT teachers.name, teachers.surname, departments.name 
+FROM `departments`
+INNER JOIN degrees
+ON degrees.department_id = departments.id
+INNER JOIN courses
+ON courses.degree_id = degrees.id
+INNER JOIN course_teacher
+ON course_teacher.course_id = courses.id
+INNER JOIN teachers
+ON course_teacher.teacher_id = teachers.id
+WHERE `departments`.`name` = "Dipartimento di Matematica";
